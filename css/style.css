@@ -1,0 +1,171 @@
+/* container */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 50px;
+}
+
+/* button        pirveli davaleba*/
+.button_container {
+  padding: 90px 250px;
+  background-color: rgb(224, 73, 224);
+}
+
+a {
+  padding: 50px 150px;
+  font-size: 35px;
+  background-color: rgb(224, 73, 224);
+  border-radius: 15px;
+  border: none;
+  letter-spacing: 5px;
+  color: rgb(244, 244, 244);
+  box-shadow: rgb(255, 255, 255) 4px 4px 6px 0px inset, black 4px 5px 2px 2px;
+  text-shadow: 7px 3px 5px rgb(37, 31, 31);
+}
+/* changing button's  style after click*/
+a:active {
+  box-shadow: rgb(0, 0, 0) 3px 3px 6px 4px inset,
+    rgba(248, 248, 248, 0.5) -5px -5px 8px 5px inset;
+  text-shadow: 1px 1px 1px rgb(37, 31, 31);
+}
+
+/* image  section            meore davaleba*/
+.image_section {
+  width: 300px;
+  padding: 10px;
+  transition: all 1s ease;
+}
+/* image */
+.forest_image {
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease;
+}
+
+/* image text */
+
+.forest_text {
+  text-align: center;
+  color: green;
+}
+
+/* hover effect on and text */
+.forest_image:hover {
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: -2px -2px 2px 2px rgba(7, 234, 26, 0.5),
+    2px 2px 2px 2px rgba(0, 249, 54, 0.3);
+}
+.image_section:hover {
+  border-radius: 10px;
+  box-shadow: -5px -5px 5px 5px rgba(7, 234, 26, 0.5),
+    5px 5px 5px 5px rgba(0, 249, 54, 0.3);
+}
+
+/* mesame davaleba */
+
+.p_text {
+  font-size: 140px;
+  color: red;
+  letter-spacing: 20px;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-name: textColor;
+}
+
+@keyframes textColor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* meotxe davaleba spinner */
+
+.spinner {
+  border-top: 20px solid green;
+  border-bottom: 20px solid red;
+  border-left: 20px solid green;
+  border-right: 20px solid yellow;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:hover {
+  animation-play-state: paused;
+}
+
+/* mexute davaleba HEADER */
+
+header {
+  display: flex;
+  width: min(100%, 1440px);
+  background-color: rgb(47, 89, 47);
+  align-items: center;
+  padding: 20px;
+}
+
+.header_nav {
+  width: inherit;
+}
+
+.header_ul {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_li {
+  font-size: 40px;
+  color: wheat;
+  text-shadow: 4px 4px 4px black;
+  transition: text-shadow 1s;
+}
+/* textis hover efecti */
+.header_li:hover {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+/* meeqvse davaleba */
+
+.loading_div {
+  width: 900px;
+  height: 50px;
+  background-color: #0fa;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.inside_loading_div{
+    border-radius: 8px;
+    height: 100%;
+    animation: load 7s linear forwards;
+    background-color: rgb(50, 169, 169);
+
+}
+/* 0idan 100mde siganis gazrda */
+@keyframes load{
+    from{
+width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
